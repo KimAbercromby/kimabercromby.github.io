@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Governance Tools</title>
+<style>
+/* Layout: one narrow column; a navy masthead band, then tools grouped by where they sit in the AI lifecycle */
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --fg: #16212e;
+  --muted: #55606e;
+  --line: #dde1e7;
+  --navy: #122C47;
+  --gold: #C8AB36;
+  --gold-text: #8a7419;
+  --link: #122C47;
+  --band-fg: #ffffff;
+  --font: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1620; --surface: #15202d; --fg: #e7ebf0; --muted: #a3adb9;
+    --line: #283544; --navy: #0b1d30; --gold: #d6bb4c; --gold-text: #d6bb4c;
+    --link: #e7ebf0; --band-fg: #ffffff; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1620; --surface: #15202d; --fg: #e7ebf0; --muted: #a3adb9;
+  --line: #283544; --navy: #0b1d30; --gold: #d6bb4c; --gold-text: #d6bb4c;
+  --link: #e7ebf0; --band-fg: #ffffff; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font); font-size: 16px; line-height: 1.55; }
+.band { background: var(--navy); color: var(--band-fg); border-bottom: 4px solid var(--gold); padding: 40px 16px 32px; }
+.wrap { max-width: 760px; margin: 0 auto; }
+main.wrap { padding: 32px 16px 48px; display: grid; gap: 36px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: 12px; color: var(--gold); font-weight: 700; margin: 0 0 10px; }
+h1 { font-size: clamp(28px, 6vw, 38px); line-height: 1.15; margin: 0 0 14px; text-wrap: balance; }
+.lede { margin: 0; max-width: 62ch; color: #d6dde6; }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .1em; color: var(--gold-text); margin: 0 0 12px; }
+.group { display: grid; gap: 12px; }
+.tool { display: grid; gap: 6px; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px 20px; text-decoration: none; color: var(--fg); transition: border-color .15s; }
+.tool:hover, .tool:focus-visible { border-color: var(--gold); outline: none; }
+.tool:focus-visible { box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 40%, transparent); }
+.tool-name { font-weight: 700; font-size: 18px; color: var(--link); display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.tool-name span:last-child { color: var(--gold-text); font-size: 15px; flex-shrink: 0; }
+.tool p { margin: 0; color: var(--muted); max-width: 62ch; }
+.url { font-size: 13px; color: var(--muted); word-break: break-all; }
+.note { border-top: 1px solid var(--line); padding-top: 20px; color: var(--muted); font-size: 14px; display: grid; gap: 8px; }
+.note p { margin: 0; max-width: 64ch; }
+@media (prefers-reduced-motion: reduce) { .tool { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="wrap">
+    <p class="eyebrow">Companion tools to the AI governance playbook</p>
+    <h1>AI Governance Tools</h1>
+    <p class="lede">Browser-based working aids that show how an AI system moves through the framework, from first triage to life after deployment. Nothing to install, and no personal data is collected.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="group" aria-labelledby="g1">
+    <h2 id="g1">Before deployment</h2>
+    <a class="tool" href="https://kimabercromby.github.io/AIGovernanceTriage-MultiBoard/">
+      <span class="tool-name"><span>Triage &amp; Governance Router</span><span aria-hidden="true">Open ↗</span></span>
+      <p>Capture a system once, give it a permanent AIR-ID, and see its priority, risk tier and the governance route it needs. Includes triage for agentic AI that can take actions.</p>
+      <span class="url">kimabercromby.github.io/AIGovernanceTriage-MultiBoard</span>
+    </a>
+    <a class="tool" href="https://kimabercromby.github.io/triage-engines-simulation/">
+      <span class="tool-name"><span>Triage Engines</span><span aria-hidden="true">Open ↗</span></span>
+      <p>An interactive look at how the priority, risk and agency results are reached, with the full methodology behind each one.</p>
+      <span class="url">kimabercromby.github.io/triage-engines-simulation</span>
+    </a>
+  </section>
+
+  <section class="group" aria-labelledby="g2">
+    <h2 id="g2">Across the whole lifecycle</h2>
+    <a class="tool" href="https://kimabercromby.github.io/AIGovernanceWalkthrough-MultiBoard/">
+      <span class="tool-name"><span>Lifecycle Walkthrough</span><span aria-hidden="true">Open ↗</span></span>
+      <p>Follow worked example systems stage by stage, from intake to change, and see which records and forums come into play at each step.</p>
+      <span class="url">kimabercromby.github.io/AIGovernanceWalkthrough-MultiBoard</span>
+    </a>
+  </section>
+
+  <section class="group" aria-labelledby="g3">
+    <h2 id="g3">After deployment</h2>
+    <a class="tool" href="https://kimabercromby.github.io/AIGovernancePostDeployment/">
+      <span class="tool-name"><span>Post-Deployment Governance Router</span><span aria-hidden="true">Open ↗</span></span>
+      <p>Route incidents, reassess changes and prepare monitoring handovers once a system is live.</p>
+      <span class="url">kimabercromby.github.io/AIGovernancePostDeployment</span>
+    </a>
+    <a class="tool" href="https://kimabercromby.github.io/AIRegScanner/">
+      <span class="tool-name"><span>Regulatory Horizon Scanner</span><span aria-hidden="true">Open ↗</span></span>
+      <p>Tracks changes to the laws, guidance and Ombudsman decisions that apply to English councils, and maps each one to the parts of the framework it affects.</p>
+      <span class="url">kimabercromby.github.io/AIRegScanner</span>
+    </a>
+  </section>
+
+  <footer class="note">
+    <p>These tools use illustrative examples rather than live council systems, and their outputs are aids for review, not decisions or records.</p>
+    <p>Built by Kim Abercromby.</p>
+  </footer>
+</main>
+</body>
+</html>
