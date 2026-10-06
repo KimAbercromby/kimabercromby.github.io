@@ -12,10 +12,10 @@
   header .wrap{max-width:1040px;margin:0 auto}
   header .kicker{color:var(--gold);font-size:12px;letter-spacing:1px;font-weight:700}
   h1{margin:8px 0 0;font-size:30px}
-  header .sub{color:#CBD5E1;font-size:14px;margin-top:8px;max-width:760px}
+  header .sub{color:#CBD5E1;font-size:14px;margin-top:8px;max-width:780px}
   .rule{height:5px;background:var(--gold)}
   main{max-width:1040px;margin:0 auto;padding:10px 20px 50px}
-  section{margin-top:26px}
+  section{margin-top:28px}
   .secttl{font-size:13px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--teal);margin:0 0 12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
   .card{border:1px solid var(--line);border-radius:10px;padding:16px 16px 14px;display:flex;flex-direction:column;background:#fff}
@@ -33,16 +33,34 @@
   <div class="wrap">
     <div class="kicker">AI GOVERNANCE</div>
     <h1>AI governance tools</h1>
-    <div class="sub">Companion tools to the AI governance playbook, organised by where they sit in a system's life: before deployment, across the whole lifecycle, and after deployment. Each tool runs in the browser and stores nothing.</div>
+    <div class="sub">Companion tools to the AI governance playbook: orientation and reference, then the operational tools grouped by where they sit in a system's life. Each tool runs in the browser and stores nothing. The guides are drafts for review; the AI Governance Lead confirms every route and tier.</div>
   </div>
 </header>
 <div class="rule"></div>
 <main id="main"></main>
-<footer><div class="n">These tools are illustrative companions to the playbook, not production systems. They structure human judgement; they do not replace it. Built and maintained by Kim Abercromby.</div></footer>
+<footer><div class="n">Illustrative companions to the playbook, not production systems. They structure human judgement; they do not replace it. Built and maintained by Kim Abercromby.</div></footer>
 
 <script>
 // EDIT HERE. Paste a live URL into "url". Leave "" to show "In development".
+const SUITE = "https://kimabercromby.github.io/AIGovernanceSuiteTools";
 const SECTIONS = [
+  { title:"Explore and orient", tools:[
+    { name:"Demo: one high-risk system, start to finish",
+      desc:"An eight-slide walkthrough of a single high-risk system from fast-track screening to full implementation, with presenter notes.",
+      url:SUITE+"/demo.html" },
+    { name:"Suite Map",
+      desc:"A visual map of the 52 artefacts by lifecycle stage, with the AI Register at the centre, filterable by role.",
+      url:SUITE+"/suite-map.html" },
+    { name:"Route Finder",
+      desc:"Answer a few screening questions and get the governance route for your role, with handover checklists.",
+      url:SUITE+"/route-finder.html" },
+    { name:"Flow Builder",
+      desc:"Build a scenario and see the sequential steps and conditions, with role indicators you can filter by function.",
+      url:SUITE+"/flow-builder.html" },
+    { name:"Legal and Regulatory Basis",
+      desc:"The laws, regulatory guidance and standards that apply to councils, with links to the official sources.",
+      url:SUITE+"/regulations.html" },
+  ]},
   { title:"Before deployment", tools:[
     { name:"Triage &amp; Governance Router",
       desc:"Capture a system once, give it a permanent AIR-ID, and see its priority, risk tier and the governance route it needs. Includes triage for agentic AI that can take actions.",
@@ -52,7 +70,7 @@ const SECTIONS = [
       url:"https://kimabercromby.github.io/triage-engines-simulation/" },
     { name:"Council AI Governance Maturity Ladder",
       desc:"A six-domain self-assessment of a council's AI governance maturity, from Initial to Optimising, with a live profile and an adoption roadmap.",
-      url:"https://kimabercromby.github.io/AIGovernanceMaturityLadder/" },   // deploy this repo, then the link works
+      url:"https://kimabercromby.github.io/AIGovernanceMaturityLadder/" },
   ]},
   { title:"Across the whole lifecycle", tools:[
     { name:"Lifecycle Walkthrough",
@@ -68,7 +86,7 @@ const SECTIONS = [
       url:"https://kimabercromby.github.io/AIRegScanner/" },
     { name:"AI Incident Observatory",
       desc:"A library of real-world AI incidents and how they were remediated, mapped to the controls that would have caught them.",
-      url:"" },   // deploy as a static page, then paste its URL here
+      url:"" },
   ]},
 ];
 
